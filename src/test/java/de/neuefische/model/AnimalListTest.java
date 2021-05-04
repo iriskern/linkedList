@@ -59,30 +59,14 @@ class AnimalListTest {
                         ""
                 ),
                 Arguments.of(
-                        new AnimalList().add(new Animal("a")),
-                        new Animal("a"),
-                        ""
-
-                ),
-                Arguments.of(
                         new AnimalList().add(new Animal("a")).add(new Animal("a")).add(new Animal("a")),
                         new Animal("a"),
                         ""
                 ),
                 Arguments.of(
-                        new AnimalList().add(new Animal("a")).add(new Animal("a")).add(new Animal("b")).add(new Animal("c")),
+                        new AnimalList().add(new Animal("a")).add(new Animal("a")).add(new Animal("b")).add(new Animal("c")).add(new Animal("a")).add(new Animal("a")).add(new Animal("d")).add(new Animal("e")).add(new Animal("a")).add(new Animal("a")),
                         new Animal("a"),
-                        "b -> c"
-                ),
-                Arguments.of(
-                        new AnimalList().add(new Animal("a")).add(new Animal("b")).add(new Animal("c")),
-                        new Animal("b"),
-                        "a -> c"
-                ),
-                Arguments.of(
-                        new AnimalList().add(new Animal("a")).add(new Animal("b")).add(new Animal("b")).add(new Animal("a")),
-                        new Animal("b"),
-                        "a -> a"
+                        "b -> c -> d -> e"
                 )
         };
     }
