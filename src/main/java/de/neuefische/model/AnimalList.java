@@ -52,13 +52,13 @@ public class AnimalList {
         if (head == null) {
             return "";
         } else {
-            String string = head.value.name;
+            StringBuilder string = new StringBuilder(head.value.name);
             AnimalListItem i = head;
             while(i.next != null){
                 i = i.next;
-                string += " -> " + i.value.name;
+                string.append(" -> ").append(i.value.name);
             }
-            return string;
+            return string.toString();
         }
     }
 
